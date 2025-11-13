@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; script-src 'self' https://cdn.tailwindcss.com; img-src 'self' https://render.albiononline.com/v1/item/;" />
+    <title>Albion Build Randomizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import for a modern look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s;
+        }
+
+        /* Subtle dark mode compatibility for the cards */
+        .image-card {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-[#E5D8C9] text-gray-800 p-4 min-h-screen flex flex-col items-center">
+
+<div class="max-w-lg w-full mx-auto p-4 md:p-6">
+    <div class="grid grid-cols-3 gap-4 md:gap-6 justify-items-center">
+
+        <div class="image-card w-full aspect-square overflow-hidden rounded-xl bg-[#E2DFDC]
+                        transform hover:scale-[1.02] hover:shadow-xl transition duration-300">
+            <img id="bag-img" title="T1 Silver Bag" src="https://render.albiononline.com/v1/item/T1_SILVERBAG_NONTRADABLE"
+                 alt="Bag" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Image Card 2 -->
+        <div class="image-card w-full aspect-square overflow-hidden rounded-xl bg-[#E2DFDC]
+                        transform hover:scale-[1.02] hover:shadow-xl transition duration-300">
+            <img id="head-img" title="T1 Silver Bag" src="https://render.albiononline.com/v1/item/T1_SILVERBAG_NONTRADABLE"
+                 alt="Head" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Image Card 3 -->
+        <div class="image-card w-full aspect-square overflow-hidden rounded-xl bg-[#E2DFDC]
+                        transform hover:scale-[1.02] hover:shadow-xl transition duration-300">
+            <img id="cape-img" title="T1 Silver Bag" src="https://render.albiononline.com/v1/item/T1_SILVERBAG_NONTRADABLE"
+                 alt="Cape" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Image Card 4 -->
+        <div class="image-card w-full aspect-square overflow-hidden rounded-xl bg-[#E2DFDC]
+                        transform hover:scale-[1.02] hover:shadow-xl transition duration-300">
+            <img id="main-img" title="T1 Silver Bag" src="https://render.albiononline.com/v1/item/T1_SILVERBAG_NONTRADABLE"
+                 alt="Main" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Image Card 5 -->
+        <div class="image-card w-full aspect-square overflow-hidden rounded-xl bg-[#E2DFDC]
+                        transform hover:scale-[1.02] hover:shadow-xl transition duration-300">
+            <img id="armor-img" title="T1 Silver Bag" src="https://render.albiononline.com/v1/item/T1_SILVERBAG_NONTRADABLE"
+                 alt="Armor" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Image Card 6 -->
+        <div class="image-card w-full aspect-square overflow-hidden rounded-xl bg-[#E2DFDC]
+                        transform hover:scale-[1.02] hover:shadow-xl transition duration-300">
+            <img id="off-img" title="T1 Silver Bag" src="https://render.albiononline.com/v1/item/T1_SILVERBAG_NONTRADABLE"
+                 alt="Off" class="w-full h-full object-cover">
+        </div>
+
+        <div class="image-card w-full aspect-square overflow-hidden rounded-xl bg-[#E2DFDC]
+                        transform hover:scale-[1.02] hover:shadow-xl transition duration-300">
+            <img id="potion-img" title="T1 Silver Bag" src="https://render.albiononline.com/v1/item/T1_SILVERBAG_NONTRADABLE"
+                 alt="Potion" class="w-full h-full object-cover">
+        </div>
+
+        <div class="image-card w-full aspect-square overflow-hidden rounded-xl bg-[#E2DFDC]
+                        transform hover:scale-[1.02] hover:shadow-xl transition duration-300">
+            <img id="shoes-img" title="T1 Silver Bag" src="https://render.albiononline.com/v1/item/T1_SILVERBAG_NONTRADABLE"
+                 alt="Shoes" class="w-full h-full object-cover">
+        </div>
+
+        <div class="image-card w-full aspect-square overflow-hidden rounded-xl bg-[#E2DFDC]
+                        transform hover:scale-[1.02] hover:shadow-xl transition duration-300">
+            <img id="food-img" title="T1 Silver Bag" src="https://render.albiononline.com/v1/item/T1_SILVERBAG_NONTRADABLE"
+                 alt="Food" class="w-full h-full object-cover">
+        </div>
+
+        <div class="w-full aspect-square">
+            <!-- Placeholder for transparent side -->
+        </div>
+
+        <div class="image-card w-full aspect-square overflow-hidden rounded-xl bg-[#E2DFDC]
+                        transform hover:scale-[1.02] hover:shadow-xl transition duration-300">
+            <img id="mount-img" title="T1 Silver Bag" src="https://render.albiononline.com/v1/item/T1_SILVERBAG_NONTRADABLE"
+                 alt="Mount" class="w-full h-full object-cover">
+        </div>
+
+        <div class="w-full aspect-square">
+            <!-- Placeholder for transparent side -->
+        </div>
+
+    </div>
+
+    <!-- Centered Button at the Bottom -->
+    <div class="flex justify-center mt-8 mb-4">
+        <button id="generate-build" class="px-8 py-3 bg-[#E2DFDC] font-bold text-base
+                       rounded-full shadow-xl">
+            Generate Build
+        </button>
+    </div>
+
+</div>
+<script defer src="index.js"></script>
+</body>
+</html>
